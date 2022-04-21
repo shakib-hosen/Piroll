@@ -1,0 +1,580 @@
+/*
+  Theme Name: Name - Applab HTML Template
+  Author: Shakib Hosen Sabbir
+  Support: 
+  Description: Piroll  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+ body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+:root{
+	--theme-color:#10c9c3;
+	--theme--white--color:#fff;
+	--section--bg--color:#f5f5f5;
+	--text--color:#787878;
+	--title--color:#171717;
+}
+img.img-fluid {
+    max-width: 360px !important;
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+.form-control:focus {
+    color: #212529;
+	background: #f5f6fa;
+    border-color: #f5f6fa !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 0%) !important;
+}
+
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 0%) !important;
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+	
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: #2B96CC;
+	text-decoration: none;
+}
+a,
+button {
+	color: #1696e7;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	color: #121121;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 600;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #616368;
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+span.fa-solid.fa-bars {
+    color: var(--theme-color);
+    border: 1px solid #ffffff91;
+    padding: 10px;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+.navbar-light .navbar-toggler {
+    color: rgb(255 255 255 / 0%) !important;
+    border-color: rgba(0,0,0,.1);
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+h5{
+	font-weight: 300 !important;
+}
+.separator {
+	border-top: 1px solid #f2f2f2
+}
+/* button style */
+
+.btn {
+	-moz-user-select: none;
+	background: var(--theme-color) none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	border: 2px solid white;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 1;
+	border-radius: 50px;
+	margin-bottom: 0;
+	padding: 20px 40px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.breadcrumb > .active {
+	color: #888;
+}
+.owl-carousel .owl-nav div {
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+	height: 40px;
+	left: 20px;
+	line-height: 40px;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	width: 40px;
+}
+.owl-carousel .owl-nav div.owl-next {
+	left: auto;
+	right: 20px;
+}
+.owl-carousel .owl-nav div {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/* Header Section Strat */
+.header{
+	height: 600px;
+}
+.background__image{
+
+    background-size: cover;
+    background-position: center left;
+
+}
+
+li.nav-item a {
+    color: var(--title--color);
+    transition: 0.1s all;
+	font-weight: 600;
+    margin: 0px 15px 0px 15px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #191919;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+li.nav-item.active a {
+    color: var(--theme-color) !important;
+}
+a.nav-link.tab.active{
+	color: var(--theme-color) !important;
+}
+.sticky {
+    padding: 0 1rem;
+    -webkit-box-shadow: 0 0.1rem 0.08rem rgb(0 0 0 / 8%);
+    box-shadow: 0 0.1rem 0.08rem rgb(0 0 0 / 8%);
+	background-color: var(--section--bg--color);
+}
+nav.header-sticky.sticky {
+	transition: 0.5s;
+    padding: 15px;
+    animation: navbarFixed .8s;
+}
+.flex__menu{
+	padding: 15px;
+}
+nav.flex__menu{
+	position: fixed;
+    z-index: 123;
+    left: 0;
+    right: 0;
+}
+li.nav-item a:hover {
+    color: var(--theme-color) !important;
+}
+.header__bar {
+    border-bottom: 1px solid #ffffff47;
+    padding-bottom: 15px;
+}
+
+.header__box h2 {
+    font-size: 45px;
+	color: var(--title--color);
+}
+.secound__btn {
+    background: white;
+    color: var(--theme-color);
+    border: 2px solid #e1e7ee;
+}
+.secound__btn:hover {
+    border: 2px solid #eaeff0;
+}
+.main__btn .outline__btn {
+    background: #223047;
+    color: var(--theme--white--color);
+    border: 1px solid var(--theme--white--color);
+	transition: 0.5s all;
+}
+.main__btn .btn:hover {
+    border: 2px solid var(--theme-color);
+    background: white;
+    color: var(--theme-color);
+}
+.header__bar{
+	position: relative;
+}
+.header__bar .icon img {
+    background: #feaa25;
+    padding: 10px;
+    border-radius: 50px;
+}
+.header__bar h6 {
+    background: #e2eaed;
+    padding: 10px 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--title--color);
+    z-index: -1;
+}
+.header__bar .icon img {
+    margin-right: -40px;
+    margin-top: -10px;
+}
+.header__box h2 {
+    font-size: 40px;
+    color: var(--theme--white--color);
+    line-height: 1.2;
+}
+.header__box p {
+    color: white;
+    font-size: 17px;
+    margin-top: 20px;
+}
+button.btn.contact__btn.header__btn {
+    border: 2px solid #928f9000;
+}
+/* Header Section End*/
+
+
+/* About Section Strat */
+.section__title h2 {
+    font-size: 40px;
+}
+/* About Section End*/
+
+
+/* Skills Section Strat */
+.skill{
+	background-color: var(--section--bg--color);
+}
+
+.skill__bar {
+    position: relative;
+}
+.skill__bar__title h4 {
+    font-size: 17px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+span.skill__bar__line {
+    position: absolute;
+    background: #d8d8d8;
+    width: 100%;
+    height: 5px;
+}
+
+span.skill__bar__line.ui::after {
+    position: absolute;
+    background: var(--theme-color);
+    width: 75%;
+    height: 5px;
+    content: '';
+}
+span.skill__bar__line.webdevelopment::after {
+	position: absolute;
+    background: var(--theme-color);
+    width: 90%;
+    height: 5px;
+    content: '';
+}
+span.skill__bar__line.marketing::after {
+	position: absolute;
+    background: var(--theme-color);
+    width: 65%;
+    height: 5px;
+    content: '';
+}
+/* Skills Section End*/
+/* Counter Section Strat */
+.counter{
+	background-color: var(--theme-color);
+}
+.counter__box .count {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.counter__box .media-body p {
+    text-transform: uppercase;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+/* Counter Section End*/
+
+/* Image Portfolio Slider */
+.read__more 
+{
+	text-align: center;
+	background-color: #f5f5f5;
+	padding: 15px;
+}
+.read__more a {
+    text-decoration: none;
+    color: #8e8e8e;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.pop__video{
+	position:relative;
+}
+.pop__video img{
+	height: 600px;
+}
+a#video1 {}
+
+.pop__icon {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 40%;
+}
+
+.pop__icon i {
+    background: var(--theme-color);
+    padding: 25px;
+    border-radius: 50px;
+	color: var(--theme--white--color);
+}
+/* Image Portfoli Slider*/
+/* Serives Section Strat */
+.service {
+    background: #f5f5f5;
+}
+
+.service__box {
+    text-align: center;
+	margin-bottom: 50px;
+}
+.service__box h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.service__box p {
+    margin-top: 10px;
+}
+/* Service Section End*/
+
+/* Client Section Strat */
+.client{
+	background-color: var(--theme-color);
+}
+.client__slider__box {
+    text-align: center;
+}
+
+.client__slider__box h2 {
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+}
+
+.client__slider__box p {
+    color: white;
+}
+/* Client Section End*/
+
+/* Image Logo Slider Section */
+.owl-carousel .owl-item img {
+    width: 90px !important;
+}
+
+/* Image Logo Slider Section*/
+
+/* Contact Section Strat */
+section.contact {
+    background: #f5f5f5;
+}
+.contact__form input {
+    border: none;
+    border-radius: 0;
+    padding: 13px;
+}
+.contact__form textarea {
+    border: none;
+    border-radius: 0;
+}
+button.btn.contact__btn {
+    border-radius: 0;
+    border: 2px solid whitesmoke;
+    transition: 0.5s;
+}
+
+button.btn.contact__btn:hover {
+    background: whitesmoke;
+    border: 2px solid #10c9c3;
+    color: #10c9c3;
+}
+/* Contact Section End*/
+
+
+/* Footer Section Strat */
+.footer{
+	background-color: black;
+}
+.footer__box p {
+    color: #bcbcbc;
+}
+.footer__box h2 {
+    color: var(--theme--white--color);
+    font-size: 22px;
+}
+.footer__box ul li a {
+    text-decoration: none;
+    color: #bcbcbc;
+}
+/* Footer Section End*/
